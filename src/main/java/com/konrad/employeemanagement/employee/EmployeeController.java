@@ -1,6 +1,7 @@
 package com.konrad.employeemanagement.employee;
 
 import com.konrad.employeemanagement.employee.domain.Employee;
+import com.konrad.employeemanagement.employee.dto.EmployeeDTO;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +18,7 @@ public class EmployeeController {
     @GetMapping("")
     @ResponseBody
     @ResponseStatus(HttpStatus.OK)
-    public List<Employee> getAllEmployees() {
+    public List<EmployeeDTO> getAllEmployees() {
         return employeeService.getAllEmployees();
     }
 }
