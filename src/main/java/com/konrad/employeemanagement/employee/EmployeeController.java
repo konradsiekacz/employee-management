@@ -21,4 +21,11 @@ public class EmployeeController {
     public List<EmployeeDTO> getAllEmployees() {
         return employeeService.getAllEmployees();
     }
+
+    @GetMapping("/{id}")
+    @ResponseBody
+    @ResponseStatus(HttpStatus.OK)
+    public EmployeeDTO getAllEmployees(@PathVariable("id") int id) {
+        return employeeService.getEmployeeById(id);
+    }
 }

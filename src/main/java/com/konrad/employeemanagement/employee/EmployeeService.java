@@ -14,8 +14,8 @@ public class EmployeeService {
 
     private EmployeeRepository employeeRepository;
 
-    public Employee getEmployeeById(long id) {
-        return employeeRepository.getById(id);
+    public EmployeeDTO getEmployeeById(long id) {
+        return EmployeeConverter.entityToDTO(employeeRepository.getEmployeeById(id));
     }
 
     public Employee getEmployeeByEmail(String email) {
@@ -34,7 +34,7 @@ public class EmployeeService {
     }
 
     public void updateEmployee(Employee updateEmployee) {
-        Employee employee = getEmployeeById(updateEmployee.getId());
+        Employee employee = employeeRepository.getEmployeeById(updateEmployee.getId());
         employee.setFirstName(updateEmployee.getFirstName());
         employee.setLastName(updateEmployee.getLastName());
         employee.setEmail(updateEmployee.getEmail());

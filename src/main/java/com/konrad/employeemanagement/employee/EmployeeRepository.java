@@ -8,4 +8,6 @@ import org.springframework.stereotype.Repository;
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
     Employee getEmployeeByEmail(String email);
+
+    Employee getEmployeeById(long id);
 }
