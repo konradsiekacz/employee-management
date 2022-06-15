@@ -21,7 +21,7 @@ public class EmployeeController {
     @GetMapping("/{id}")
     @ResponseBody
     @ResponseStatus(HttpStatus.OK)
-    public EmployeeDTO getAllEmployees(@PathVariable("id") int id) {
+    public EmployeeDTO getAllEmployees(@PathVariable("id") Long id) {
         return employeeService.getEmployeeById(id);
     }
 
