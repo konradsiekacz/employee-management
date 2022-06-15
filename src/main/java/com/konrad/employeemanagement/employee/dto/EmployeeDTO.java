@@ -14,7 +14,7 @@ public class EmployeeDTO {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @JsonProperty("id")
-    private long id;
+    private Long id;
     @JsonProperty("first_name")
     private String firstName;
     @JsonProperty("last_name")
