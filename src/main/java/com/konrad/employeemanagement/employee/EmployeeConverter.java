@@ -12,10 +12,10 @@ public class EmployeeConverter {
 
     public static EmployeeDTO entityToDTO(Employee employee) {
         EmployeeDTO employeeDTO = EmployeeDTO.builder().build();
-        employeeDTO.setId(employeeDTO.getId());
+        employeeDTO.setId(employee.getId());
         employeeDTO.setFirstName(employee.getFirstName());
         employeeDTO.setLastName(employee.getLastName());
-        employeeDTO.setEmail(employeeDTO.getEmail());
+        employeeDTO.setEmail(employee.getEmail());
         return employeeDTO;
     }
 
