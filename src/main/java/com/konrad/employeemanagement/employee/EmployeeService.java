@@ -22,7 +22,6 @@ public class EmployeeService {
         return employeeRepository.getEmployeeByEmail(email);
     }
 
-
     public List<EmployeeDTO> getAllEmployees() {
         return employeeRepository.findAll().stream()
                 .map(EmployeeConverter::entityToDTO)
@@ -44,5 +43,4 @@ public class EmployeeService {
     public void deleteEmployee(long id) {
         employeeRepository.deleteById(id);
     }
-
 }
